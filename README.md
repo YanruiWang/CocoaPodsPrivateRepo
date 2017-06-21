@@ -1,6 +1,6 @@
-# 家健 iOS CocoaPods 私有库使用方法
+# iOS CocoaPods 私有库使用方法
 ## 相关概念
-1. `pod spec`: 相关`pod`项目的索引`repo`,比如官方的_https://github.com/CocoaPods/Specs.git_
+1. `pod spec`: 相关`pod`项目的索引`repo`,比如官方的 https://github.com/CocoaPods/Specs.git
 2. `podspec` 文件: 用于说明某个`pod`版本的详尽信息，比如git地址，版本，iOS版本信息，文件目录等
 
 ## 私有库创建前期准备
@@ -21,15 +21,15 @@ pod repo lint
 ### 文件形式:
 ```ruby
 Pod::Spec.new do |s|
-	s.name         = 'HHCQRCode'
+	s.name         = 'name'
 	s.version      = '0.4.1'
-	s.summary      = '扫描二维码'
-	s.homepage     = 'http://gitlab.jiaj.com.cn/app-component/iOS-private-repo-qrcode.git'
-	s.authors      = { 'wangyanrui' => 'ray.wang@jiaj.com.cn'}
+	s.summary      = 'summary'
+	s.homepage     = 'http://github.com/xxx/xxx.git'
+	s.authors      = { 'auther' => 'xxx@example.com'}
 	s.license      = { :type => "MIT", :file => "LICENSE" }
 	s.platform     = :ios, '9.0'
 	s.ios.deployment_target = '9.0'
-	s.source       = { :git => 'http://gitlab.jiaj.com.cn/app-component/iOS-private-repo-qrcode.git', :tag => '0.4.1'}
+	s.source       = { :git => 'http://github.com/xxx/xxx.git', :tag => '0.4.1'}
 	s.source_files = 'HHCQRCode/lib/*.{swift}','HHCQRCode/lib/Media.xcassets/*.png'
 	s.requires_arc = true
 end
